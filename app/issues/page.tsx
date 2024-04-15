@@ -4,10 +4,10 @@ import React from 'react'
 
 const IssuesPage = () => {
     return (
-        <div>
-            <Button>
+        <div className='flex justify-center'>
+            <Button size='3'>
                 <Link href='/issues/new'>
-                    New Issue
+                    Create New Issue
                 </Link>
             </Button>
         </div>
