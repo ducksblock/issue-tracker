@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { z } from 'zod'
 import { PrismaClient } from '@prisma/client'
-
-const createIssueSchema = z.object({
-    title: z.string().min(1, 'A Title is required.').max(255),
-    description: z.string().min(1, 'A Description is required.')
-})
+import { createIssueSchema } from "../../validationSchemas";
 
 const prisma = new PrismaClient()
 
